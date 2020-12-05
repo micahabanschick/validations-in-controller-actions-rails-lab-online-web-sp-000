@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
   validates :content, length: { minimum: 100 }
 
   def correct_category?
-    category == "Fiction" || category == "Non-Fiction"
+    if :category == "Fiction" || category == "Non-Fiction"
+      true
+    end
   end
 end
